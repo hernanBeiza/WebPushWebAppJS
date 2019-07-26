@@ -1,0 +1,78 @@
+<div class="header-container container">
+    <div class="header-row">
+        <div class="header-column">
+            <div class="header-logo">
+                <a href="/#/inicio">
+                    <img src="assets/img/logo-medical.png">
+                </a>
+            </div>
+        </div>
+        <div class="header-column">
+            <div class="header-row">
+                <div class="header-nav pt-xs">
+                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                        <nav>
+                            <ul class="nav nav-pills" id="mainNav">
+                                <li class="dropdown-secondary" ng-class="isActive('inicio') ? 'activedropdown-full-color' : 'dropdown-full-color'"></i>
+                                    <a href="#/inicio" ng-click="clickSeccion();">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="dropdown-secondary" ng-class="isActive('nosotros') ? 'activedropdown-full-color' : 'dropdown-full-color'"></i>
+                                    <a href="#/nosotros" ng-click="clickSeccion();" >
+                                        Nosotros
+                                    </a>
+                                </li>  
+                               <!--                                                                                     
+                                <li class="dropdown-secondary" ng-class="isActive('cirugia') ? 'activedropdown-full-color' : 'dropdown-full-color'"></i>
+                                    <a href="/#/cirugia" ng-click="clickSeccion();" >
+                                        Cirugía
+                                    </a>    
+                                </li>
+                                -->
+                                <li class="dropdown dropdown-secondary" ng-class="isActive('especialidades') ? 'activedropdown-full-color' : 'dropdown-full-color'"></i>
+                                    <a class="dropdown-toggle" href="#">
+                                        Servicios Médicos
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li ng-repeat="item in model.especialidades | filter:{ menu: true }">
+                                            <a href="#/servicios/{{item.slug}}" ng-click="clickSeccion();">{{item.nombre}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-secondary" ng-class="isActive('centros') ? 'activedropdown-full-color' : 'dropdown-full-color'"></i>
+                                    <a class="dropdown-toggle" href="#">
+                                        Centro de atención
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li ng-repeat="item in model.centros">
+                                            <a href="#/centros/{{item.slug}}" ng-click="clickSeccion();">{{item.nombre}}</a>
+                                        </li>
+                                    </ul>
+                                </li>                                
+                                
+                                <li class="dropdown dropdown-full-color dropdown-secondary">
+                                    <a class="dropdown-toggle" href="#">
+                                        Convenios
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li ng-repeat="item in model.convenios">
+                                           <a href="#/convenios/{{item.slug}}" ng-click="clickSeccion();">{{item.nombre}}</a>
+                                        </li>
+                                    </ul>
+                                </li>                            
+                                
+                                <li class="dropdown-secondary" ng-class="isActive('contacto') ? 'activedropdown-full-color' : 'dropdown-full-color'">
+                                   <a href="#/contacto" ng-click="clickSeccion();">Contacto</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

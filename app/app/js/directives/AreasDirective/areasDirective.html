@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="row mt-xlg">
+        <div class="col-md-12">
+            <h2 class="font-weight-semibold m-none">Servicios Médicos</h2>
+            <p class="lead font-weight-normal">Especialidades</p>
+
+            <div id="porfolioAjaxBoxMedical" class="ajax-box ajax-box-init mb-lg">
+
+                <div class="bounce-loader">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+
+                <div class="ajax-box-content" id="porfolioAjaxBoxContentMedical"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row mb-xlg">
+        <div class="owl-carousel owl-theme nav-bottom rounded-nav pl-xs pr-xs" data-plugin-options="{'items': 4, 'loop': false, 'dots': false, 'nav': true}">
+            <div class="pr-sm pl-sm" ng-repeat="especialidad in model.especialidades">
+                <a href="/#/servicios/{{especialidad.slug}}" ng-click="scrollTop();" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">                 
+                            <img ng-src="{{especialidad.foto}}" class="img-responsive" alt="Imagen de especialidad {{especialidad.nombre}}">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">                            
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">{{especialidad.nombre}}</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <!--
+            <div class="pr-sm pl-sm" >
+                <a href="#" data-href="demo-medical-doctors-detail.html" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">
+                            <img src="assets/img/demos/medical/doctors/doctor-1.jpg" class="img-responsive" alt="">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">
+                            
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">Cardiología</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="pr-sm pl-sm">
+                <a href="#" data-href="demo-medical-doctors-detail.html" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">
+                            <img src="assets/img/demos/medical/doctors/doctor-2.jpg" class="img-responsive" alt="">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">
+                            
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">Dental</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="pr-sm pl-sm">
+                <a href="#" data-href="demo-medical-doctors-detail.html" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">
+                            <img src="assets/img/demos/medical/doctors/doctor-3.jpg" class="img-responsive" alt="">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">
+                                
+                                
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">Neurología</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="pr-sm pl-sm">
+                <a href="#" data-href="demo-medical-doctors-detail.html" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">
+                            <img src="assets/img/demos/medical/doctors/doctor-4.jpg" class="img-responsive" alt="">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">
+                            
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">Fonoaudiología</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="pr-sm pl-sm">
+                <a href="#" data-href="demo-medical-doctors-detail.html" data-ajax-on-page class="text-decoration-none">
+                    <span class="thumb-info thumb-info-no-zoom thumb-info-hide-wrapper-bg">
+                        <span class="thumb-info-wrapper m-none">
+                            <img src="assets/img/demos/medical/doctors/doctor-5.jpg" class="img-responsive" alt="">
+                        </span>
+                        <span class="thumb-info-caption p-md pt-xlg pb-xlg">
+                            <span class="custom-thumb-info-title">
+                                
+                                <span class="custom-thumb-info-inner font-weight-semibold text-lg">Ginecología</span>
+                                <i class="icon-arrow-right-circle icons font-weight-semibold text-lg "></i>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            -->
+        </div>
+    </div>
+</div>

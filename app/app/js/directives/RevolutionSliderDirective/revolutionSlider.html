@@ -1,0 +1,16 @@
+<div class="slider-container rev_slider_wrapper fullwidthbanner-container">
+    <div id="revolutionSlider" class="slider fullwidthabanner" 
+    data-plugin-revolution-slider 
+    data-plugin-options="{'spinner': 'spinner3', 'delay': 2000, 'sliderLayout': 'fullwidth', 'gridwidth': 1920, 'gridheight': 997, 'disableProgressBar': 'on', 'navigation': {'': {'enable': true, 'direction': 'vertical', 'h_align': 'right', 'v_align': 'center', 'space': 5}, 'arrows': {'enable': true}}}">
+        <ul>
+            <li data-transition="fade" data-link="{{item.url}}" data-target="{{item.target}}" data-delay="{{item.tiempo}}" ng-repeat="item in model.sliders">
+                <img ng-src="{{item.foto}}"  
+                    alt="{{item.alt}}"
+                    data-bgposition="left top"
+                    data-bgfit="cover" 
+                    data-bgrepeat="no-repeat"
+                    class="rev-slidebg">
+            </li>
+        </ul>
+    </div>
+</div>
